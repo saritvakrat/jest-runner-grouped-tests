@@ -1,12 +1,12 @@
 {
-	"name": "jest-runner-gropus",
+	"name": "jest-runner-groups",
 	"version": "2.2.0",
 	"description": "Tag and run groups of tests with Jest",
 	"license": "MIT",
 	"author": "Eugene Manuilov <eugene.manuilov@gmail.com>",
-	"homepage": "https://github.com/saritvakrat/jest-runner-gropus#readme",
+	"homepage": "https://github.com/saritvakrat/jest-runner-groups#readme",
 	"bugs": {
-		"url": "https://github.com/saritvakrat/jest-runner-gropus/issues"
+		"url": "https://github.com/saritvakrat/jest-runner-groups/issues"
 	},
 	"repository": {
 		"type": "git",
