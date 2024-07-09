@@ -18,7 +18,7 @@ jobs:
           - ./jest/27
     steps:
       - name: Clean workspace
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
         run: |
              git reset --hard
              git clean -fdx
