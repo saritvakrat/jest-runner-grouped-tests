@@ -17,7 +17,11 @@ jobs:
           - ./jest/26
           - ./jest/27
     steps:
-      - uses: actions/checkout@v1
+      - name: Clean workspace
+      - run: |
+             git reset --hard
+             git clean -fdx
+      - uses: actions/checkout@v3
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
