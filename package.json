@@ -10,7 +10,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git@github.com:saritvakrat/groups-runner-jest.git"
+		"url": "git@github.com:saritvakrat/jest-runner-groups.git"
 	},
 	"keywords": [
 		"jest",
