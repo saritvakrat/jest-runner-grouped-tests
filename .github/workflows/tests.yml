@@ -24,10 +24,10 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Pack @jest/jest-runner-groups
         run: npm pack
-      - name: Debug - List files in root
+      - name: Debug - List files after packing
         run: ls -l
-      - name: Debug - List contents of tarball
-        run: tar -tzf @jest-jest-runner-groups-`cat package.json | jq .version -r`.tgz
+      - name: Debug - List files in parent directory
+        run: ls -l ..
       - name: Install test dependencies
         working-directory: ${{ matrix.jest }}
         run: npm i
