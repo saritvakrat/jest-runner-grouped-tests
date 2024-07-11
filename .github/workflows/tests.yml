@@ -31,7 +31,7 @@ jobs:
         run: npm i
       - name: Add jest-runner-grouped-tests
         working-directory: ${{ matrix.jest }}
-        run: npm i "../../jjest-runner-grouped-tests-`cat ../../package.json | jq .version -r`.tgz"
+        run: npm i "../../jest-runner-grouped-tests-`cat ../../package.json | jq .version -r`.tgz"
       - name: Run tests
         working-directory: ${{ matrix.jest }}
         run: |
