@@ -139,7 +139,7 @@ it( '...', () => {
 
 ## Contribute
 
-Want to help or have a suggestion? Open a [new ticket](https://github.com/eugene-manuilov/jest-runner-groups/issues/new) and we can discuss it or submit a pull request.
+Want to help or have a suggestion? Open a [new ticket](https://github.com/saritvakrat/jest-runner-grouped-tests/issues/new) and we can discuss it or submit a pull request.
 
 ## License
 
