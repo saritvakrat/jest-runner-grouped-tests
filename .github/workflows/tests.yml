@@ -18,20 +18,27 @@ jobs:
           - ./jest/27
     steps:
       - uses: actions/checkout@v3
-        with:
-          clean: true
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
       - name: Pack @jest/jest-runner-groups
         run: npm pack
+      - name: Debug - List files in root
+        run: ls -l
+      - name: Debug - List contents of tarball
+        run: tar -tzf @jest-jest-runner-groups-`cat package.json | jq .version -r`.tgz
       - name: Install test dependencies
         working-directory: ${{ matrix.jest }}
         run: npm i
       - name: Add @jest/jest-runner-groups
         working-directory: ${{ matrix.jest }}
-        run: npm i "../../@jest/jest-runner-groups-`cat ../../package.json | jq .version -r`.tgz"
+        run: |
+          PACKAGE_VERSION=`cat ../../package.json | jq .version -r`
+          TAR_FILE="@jest-jest-runner-groups-${PACKAGE_VERSION}.tgz"
+          echo "Installing package from $TAR_FILE"
+          ls -l "../../"
+          npm i "../../$TAR_FILE"
       - name: Run tests
         working-directory: ${{ matrix.jest }}
         run: |
