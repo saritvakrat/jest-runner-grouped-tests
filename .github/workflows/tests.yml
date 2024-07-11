@@ -26,16 +26,14 @@ jobs:
         run: npm pack
       - name: Debug - List files after packing
         run: ls -l
-      - name: Debug - List files in parent directory
-        run: ls -l ..
       - name: Install test dependencies
         working-directory: ${{ matrix.jest }}
         run: npm i
-      - name: Add @jest/jest-runner-groups
+      - name: Add jest-runner-groups
         working-directory: ${{ matrix.jest }}
         run: |
           PACKAGE_VERSION=`cat ../../package.json | jq .version -r`
-          TAR_FILE="@jest-jest-runner-groups-${PACKAGE_VERSION}.tgz"
+          TAR_FILE="jest-jest-runner-groups-${PACKAGE_VERSION}.tgz"
           echo "Installing package from $TAR_FILE"
           ls -l "../../"
           npm i "../../$TAR_FILE"
