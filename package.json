@@ -1,5 +1,5 @@
 {
-	"name": "jest-runner-grouped-tests",
+	"name": "jest-runner-groups",
 	"version": "2.2.0",
 	"description": "Tag and run groups of tests with Jest",
 	"license": "MIT",
