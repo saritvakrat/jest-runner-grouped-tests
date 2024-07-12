@@ -31,9 +31,6 @@ jobs:
       - name: Install test dependencies
         working-directory: ${{ matrix.jest }}
         run: npm i
-      - name: Debug - Output Jest configuration
-        working-directory: ${{ matrix.jest }}
-        run: npx jest --showConfig
       - name: Add jest-runner-grouped-tests
         working-directory: ${{ matrix.jest }}
         run: |
@@ -42,6 +39,9 @@ jobs:
           echo "Installing package from $TAR_FILE"
           ls -l "../../"
           npm i "../../$TAR_FILE"
+      - name: Debug - Output Jest configuration
+        working-directory: ${{ matrix.jest }}
+        run: npx jest --showConfig
       - name: Run tests
         working-directory: ${{ matrix.jest }}
         run: |
