@@ -11,6 +11,8 @@ jobs:
           - 12.x
           - 14.x
           - 16.x
+          - 18.x
+          - 20.x
         jest:
           - ./jest/24
           - ./jest/25
@@ -29,6 +31,12 @@ jobs:
       - name: Install test dependencies
         working-directory: ${{ matrix.jest }}
         run: npm i
+      - name: Debug - List installed packages
+        working-directory: ${{ matrix.jest }}
+        run: npm list
+      - name: Debug - Output Jest configuration
+        working-directory: ${{ matrix.jest }}
+        run: npx jest --showConfig
       - name: Add jest-runner-grouped-tests
         working-directory: ${{ matrix.jest }}
         run: npm i "../../jest-runner-grouped-tests-`cat ../../package.json | jq .version -r`.tgz"
