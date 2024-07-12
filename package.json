@@ -32,7 +32,7 @@
 	},
 	"peerDependencies": {
 		"jest-runner": ">= 27",
-		"jest-docblock": ">= 7"
+		"jest-docblock": ">= 27"
 	},
 	"devDependencies": {
 		"eslint": "^7.32.0",
