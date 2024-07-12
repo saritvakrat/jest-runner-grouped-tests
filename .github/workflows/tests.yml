@@ -36,7 +36,12 @@ jobs:
         run: npx jest --showConfig
       - name: Add jest-runner-grouped-tests
         working-directory: ${{ matrix.jest }}
-        run: npm i "../../jest-runner-grouped-tests-`cat ../../package.json | jq .version -r`.tgz"
+        run: |
+          PACKAGE_VERSION=`cat ../../package.json | jq .version -r`
+          TAR_FILE="jest-runner-grouped-tests-${PACKAGE_VERSION}.tgz"
+          echo "Installing package from $TAR_FILE"
+          ls -l "../../"
+          npm i "../../$TAR_FILE"
       - name: Run tests
         working-directory: ${{ matrix.jest }}
         run: |
