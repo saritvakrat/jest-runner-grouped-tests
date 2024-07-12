@@ -31,9 +31,6 @@ jobs:
       - name: Install test dependencies
         working-directory: ${{ matrix.jest }}
         run: npm i
-      - name: Debug - List installed packages
-        working-directory: ${{ matrix.jest }}
-        run: npm list
       - name: Debug - Output Jest configuration
         working-directory: ${{ matrix.jest }}
         run: npx jest --showConfig
