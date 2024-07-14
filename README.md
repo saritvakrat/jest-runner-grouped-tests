@@ -65,7 +65,7 @@ To make Jest use this runner, you need to update your Jest config and add `group
     "dependencies": {
     },
     "jest": {
-        "runner": "groups"
+        "runner": "jest-runner-grouped-tests"
     }
 }
 ```
@@ -75,7 +75,7 @@ Or in the `jest.config.js` file:
 ```javascript
 module.exports = {
     ...
-    runner: "groups"
+    runner: "jest-runner-grouped-tests"
 };
 ```
 
