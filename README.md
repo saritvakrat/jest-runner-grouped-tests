@@ -1,15 +1,15 @@
 # jest-runner-groups
 
-[![Version](https://img.shields.io/npm/v/jest-runner-groups.svg)](https://www.npmjs.com/package/jest-runner-groups)
-[![Downloads/week](https://img.shields.io/npm/dw/jest-runner-groups.svg)](https://www.npmjs.com/package/jest-runner-groups)
-[![License](https://img.shields.io/npm/l/jest-runner-groups.svg)](https://github.com/eugene-manuilov/jest-runner-groups/blob/master/package.json)
+[![Version](https://img.shields.io/npm/v/jest-runner-grouped-tests.svg)](https://www.npmjs.com/package/jest-runner-grouped-tests)
+[![Downloads/week](https://img.shields.io/npm/dw/jest-runner-grouped-tests.svg)](https://www.npmjs.com/package/jest-runner-grouped-tests)
+[![License](https://img.shields.io/npm/l/jest-runner-grouped-tests.svg)](https://github.com/saritvakrat/jest-runner-grouped-tests/blob/master/package.json)
 
 A test runner that allows you to tag your tests and execute specific groups of tests with Jest.
 
-## Instalation
+## Installation
 
 ```sh-session
-npm i -D jest-runner-groups
+npm i -D jest-runner-grouped-tests
 ```
 
 ## Usage
@@ -139,7 +139,7 @@ it( '...', () => {
 
 ## Contribute
 
-Want to help or have a suggestion? Open a [new ticket](https://github.com/eugene-manuilov/jest-runner-groups/issues/new) and we can discuss it or submit a pull request.
+Want to help or have a suggestion? Open a [new ticket](https://github.com/saritvakrat/jest-runner-grouped-tests/issues/new) and we can discuss it or submit a pull request.
 
 ## License
 
