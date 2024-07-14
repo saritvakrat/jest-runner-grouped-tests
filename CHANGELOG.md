@@ -2,7 +2,17 @@
 
 ## [Unreleased] - TBD
 
-- 
+-
+
+## [v2.2.2] (2024-07-14)
+
+- Change runner name
+- Add support for Jest 29
+
+## [v2.2.1] (2024-07-14)
+
+- Added information about the currently running groups to environment variables.
+- Updated dependencies to the latest versions.
 
 ## [v2.2.0] (2022-03-28)
 
