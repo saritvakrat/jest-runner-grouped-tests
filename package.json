@@ -1,16 +1,17 @@
 {
-	"name": "jest-runner-grouped-tests",
+	"name": "jest-runner-groups",
 	"version": "3.2.2",
 	"description": "Tag and run groups of tests with Jest",
 	"license": "MIT",
 	"author": "Eugene Manuilov <eugene.manuilov@gmail.com>",
-	"homepage": "https://github.com/saritvakrat/jest-runner-grouped-tests#readme",
+	"homepage": "https://github.com/saritvakrat/jest-runner-groups#readme",
+	"types": "jest-runner-groups.d.ts",
 	"bugs": {
-		"url": "https://github.com/saritvakrat/jest-runner-grouped-tests/issues"
+		"url": "https://github.com/saritvakrat/jest-runner-groups/issues"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/saritvakrat/jest-runner-grouped-tests.git"
+		"url": "git+https://github.com/saritvakrat/jest-runner-groups.git"
 	},
 	"keywords": [
 		"jest",
@@ -87,5 +88,10 @@
 		"hooks": {
 			"pre-commit": "npm run lint --silent"
 		}
+	},
+	"publishConfig": {
+		"access": "public",
+		"registry": "https://registry.npmjs.org/",
+		"scope": "@saritvakrat"
 	}
 }

@@ -7,6 +7,7 @@
 
 - Change runner name
 - Add tests for Jest 29
+- add typescript support
 
 ## [v2.2.1] (2024-07-14)
 
@@ -46,5 +47,5 @@
 
 - Created initial version of the runner.
 
-[Unreleased]: https://github.com/saritvakrat/jest-runner-grouped-tests/compare/v2.2.0...master
-[v2.2.1]: https://github.com/saritvakrat/jest-runner-grouped-tests/compare/v2.1.0...v2.2.0
+[Unreleased]: https://github.com/saritvakrat/jest-runner-groups/compare/v2.2.0...master
+[v2.2.1]: https://github.com/saritvakrat/jest-runner-groups/compare/v2.1.0...v2.2.0
