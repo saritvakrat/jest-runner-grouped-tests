@@ -1,4 +1,4 @@
-# jest-runner-groups
+# jest-runner-grouped-tests
 
 [![Version](https://img.shields.io/npm/v/jest-runner-grouped-tests.svg)](https://www.npmjs.com/package/jest-runner-grouped-tests)
 [![Downloads/week](https://img.shields.io/npm/dw/jest-runner-grouped-tests.svg)](https://www.npmjs.com/package/jest-runner-grouped-tests)

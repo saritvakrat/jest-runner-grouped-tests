@@ -37,11 +37,5 @@
 
 - Created initial version of the runner.
 
-[Unreleased]: https://github.com/eugene-manuilov/jest-runner-groups/compare/v2.2.0...master
-[v2.2.0]: https://github.com/eugene-manuilov/jest-runner-groups/compare/v2.1.0...v2.2.0
-[v2.1.0]: https://github.com/eugene-manuilov/jest-runner-groups/compare/v2.0.1...v2.1.0
-[v2.0.1]: https://github.com/eugene-manuilov/jest-runner-groups/compare/v2.0.0...v2.0.1
-[v2.0.0]: https://github.com/eugene-manuilov/jest-runner-groups/compare/v1.1.1...v2.0.0
-[v1.1.1]: https://github.com/eugene-manuilov/jest-runner-groups/compare/v1.1.0...v1.1.1
-[v1.1.0]: https://github.com/eugene-manuilov/jest-runner-groups/compare/v1.0.0...v1.1.0
-[v1.0.0]: https://github.com/eugene-manuilov/jest-runner-groups/releases/tag/v1.0.0
+[Unreleased]: https://github.com/saritvakrat/jest-runner-grouped-tests/compare/v2.2.0...master
+[v2.2.1]: https://github.com/saritvakrat/jest-runner-grouped-tests/compare/v2.1.0...v2.2.0
