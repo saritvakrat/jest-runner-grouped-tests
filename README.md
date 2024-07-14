@@ -9,7 +9,7 @@ A test runner that allows you to tag your tests and execute specific groups of t
 ## Installation
 
 ```sh-session
-npm i -D jest-runner-grouped-tests
+npm i -D jest-runner-groups
 ```
 
 ## Usage
@@ -65,7 +65,7 @@ To make Jest use this runner, you need to update your Jest config and add `group
     "dependencies": {
     },
     "jest": {
-        "runner": "jest-runner-grouped-tests"
+        "runner": "groups"
     }
 }
 ```
@@ -75,7 +75,7 @@ Or in the `jest.config.js` file:
 ```javascript
 module.exports = {
     ...
-    runner: "jest-runner-grouped-tests"
+    runner: "groups"
 };
 ```
 
@@ -109,7 +109,7 @@ If you want to exclude a subgroup from being executed, add minus character to th
 jest --group=foo --group=-foo/baz
 ```
 
-### Knowing which gruops are running
+### Knowing which groups are running
 
 When you run your tests using jest-runner-groups, you can check which group is currently running by checking the current process environment variables. This can be handy if you want to use different fixtures for different groups or skip a certain functionality for a specific group.
 
@@ -136,6 +136,54 @@ it( '...', () => {
     expect( process.env.JEST_GROUP_UNIT_UTILITY ).not.toBeTruthy();
 } );
 ```
+
+### Run group of tests using a regular expressions
+
+You can use `--regex` argument to specify multiple groups by a regular expression:
+
+```sh-session
+jest --regex=foo/.\*
+```
+
+You can use multiple `--regex` arguments:
+
+```sh-session
+jest --regex=foo/.\* --regex=bar\|baz
+```
+
+Or use both `--regex` and `--group`:
+
+```sh-session
+jest --regex=foo/.\* --group=bar
+```
+
+### Exclude groups using regular expression
+
+If you want to exclude tests from being executed, add minus character to the beginnig of your regular expression.
+
+The following example shows how to run all tests with a group's name contains `foo`, but exclude all groups that `foo/baz/.*` match their name:
+
+```sh-session
+jest --regex=foo --regex=-foo/baz/.\*
+```
+
+
+### Must Include Groups
+The mustIncludeGroups functionality allows you to specify groups that must be included for a test to be run. 
+If any of these groups are missing from the test's tags, the test will be excluded from the run. This is useful for ensuring certain essential groups are always included in the test execution criteria.
+
+To use the mustIncludeGroups functionality, add the ! prefix to the group name in the command line argument. For example, if you want to run tests that must include the core group:
+
+```sh-session
+jest --group=unit --group=!core
+```
+
+You can combine mustIncludeGroups with other group and regex arguments for more refined control:
+
+```sh-session
+jest --group=unit --group=!core --regex=foo/.*
+```
+
 
 ## Contribute
 
