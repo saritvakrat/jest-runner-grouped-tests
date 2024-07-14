@@ -38,7 +38,7 @@ jobs:
         run: npm i "../../jest-runner-grouped-tests-`cat ../../package.json | jq .version -r`.tgz"
       - name: Debug - Output Jest configuration
         working-directory: ${{ matrix.jest }}
-        run: npx jest --showConfig
+        run: npx jest --clearCache && npx jest --showConfig
       - name: Run tests
         working-directory: ${{ matrix.jest }}
         run: |
