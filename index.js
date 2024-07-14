@@ -7,7 +7,7 @@ const TestRunner = Object.prototype.hasOwnProperty.call( JestRunner, 'default' )
 
 const ARG_PREFIX = '--group=';
 
-class GroupRunner extends TestRunner {
+class Group2Runner extends TestRunner {
 
 	static getGroups( args ) {
 		const include = [];
@@ -79,4 +79,4 @@ class GroupRunner extends TestRunner {
 
 }
 
-module.exports = GroupRunner;
+module.exports = Group2Runner;
