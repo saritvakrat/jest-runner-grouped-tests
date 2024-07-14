@@ -1,6 +1,6 @@
 {
 	"name": "jest-runner-grouped-tests",
-	"version": "2.2.2",
+	"version": "3.2.2",
 	"description": "Tag and run groups of tests with Jest",
 	"license": "MIT",
 	"author": "Eugene Manuilov <eugene.manuilov@gmail.com>",

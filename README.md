@@ -4,7 +4,7 @@
 [![Downloads/week](https://img.shields.io/npm/dw/jest-runner-grouped-tests.svg)](https://www.npmjs.com/package/jest-runner-grouped-tests)
 [![License](https://img.shields.io/npm/l/jest-runner-grouped-tests.svg)](https://github.com/saritvakrat/jest-runner-grouped-tests/blob/master/package.json)
 
-A test runner that allows you to tag your tests and execute specific groups of tests with Jest.
+A test runner that allows you to tag your tests and execute specific groups of tests with Jest. This runner is based on the original repository that was [archived](https://github.com/eugene-manuilov/jest-runner-groups)
 
 ## Installation
 
@@ -65,7 +65,7 @@ To make Jest use this runner, you need to update your Jest config and add `group
     "dependencies": {
     },
     "jest": {
-        "runner": "groups"
+        "runner": "jest-runner-grouped-tests"
     }
 }
 ```
@@ -75,7 +75,7 @@ Or in the `jest.config.js` file:
 ```javascript
 module.exports = {
     ...
-    runner: "groups"
+    runner: "jest-runner-grouped-tests"
 };
 ```
 

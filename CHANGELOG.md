@@ -2,12 +2,11 @@
 
 ## [Unreleased] - TBD
 
--
 
-## [v2.2.2] (2024-07-14)
+## [v3.2.2] (2024-07-14)
 
 - Change runner name
-- Add support for Jest 29
+- Add tests for Jest 29
 
 ## [v2.2.1] (2024-07-14)
 
