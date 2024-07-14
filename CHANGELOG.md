@@ -7,6 +7,7 @@
 
 - Change runner name
 - Add tests for Jest 29
+- add typescript support
 
 ## [v2.2.1] (2024-07-14)
 
