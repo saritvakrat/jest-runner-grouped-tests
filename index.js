@@ -7,8 +7,13 @@ const TestRunner = Object.prototype.hasOwnProperty.call( JestRunner, 'default' )
 
 const ARG_PREFIX = '--group=';
 
-class Group2Runner extends TestRunner {
+class GroupsRunner extends TestRunner {
 
+	/**
+	 * Parses command line arguments to identify groups to include and exclude
+	 * @param args
+	 * @return {{include: *[], exclude: *[]}}
+	 */
 	static getGroups( args ) {
 		const include = [];
 		const exclude = [];
@@ -30,6 +35,13 @@ class Group2Runner extends TestRunner {
 		};
 	}
 
+	/**
+	 * Filters tests based on the specified groups.
+	 * @param include
+	 * @param exclude
+	 * @param test
+	 * @return {boolean}
+	 */
 	static filterTest( { include, exclude }, test ) {
 		let found = include.length === 0;
 
@@ -53,8 +65,18 @@ class Group2Runner extends TestRunner {
 		return found;
 	}
 
+	/**
+	 * Overrides the default runTests method to filter tests based on groups before running them.
+	 * @param tests
+	 * @param watcher
+	 * @param onStart
+	 * @param onResult
+	 * @param onFailure
+	 * @param options
+	 * @return {Promise<void>}
+	 */
 	runTests( tests, watcher, onStart, onResult, onFailure, options ) {
-		const groups = GroupRunner.getGroups( process.argv );
+		const groups = GroupsRunner.getGroups( process.argv );
 
 		groups.include.forEach( ( group ) => {
 			if ( groups.exclude.includes( group ) ) {
@@ -67,7 +89,7 @@ class Group2Runner extends TestRunner {
 
 		return super.runTests(
 			groups.include.length > 0 || groups.exclude.length > 0
-				? tests.filter( ( test ) => GroupRunner.filterTest( groups, test ) )
+				? tests.filter( ( test ) => GroupsRunner.filterTest( groups, test ) )
 				: tests,
 			watcher,
 			onStart,
@@ -79,4 +101,4 @@ class Group2Runner extends TestRunner {
 
 }
 
-module.exports = Group2Runner;
+module.exports = GroupsRunner;
