@@ -17,6 +17,7 @@ jobs:
           - ./jest/25
           - ./jest/26
           - ./jest/27
+          - ./jest/29
     steps:
       - uses: actions/checkout@v3
         with:
