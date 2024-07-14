@@ -11,7 +11,7 @@
 		"testMatch": [
 			"<rootDir>/tests/*.js"
 		],
-		"runner": "groups",
+		"runner": "groups-tests",
 		"verbose": true
 	}
 }
