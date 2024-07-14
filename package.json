@@ -88,5 +88,10 @@
 		"hooks": {
 			"pre-commit": "npm run lint --silent"
 		}
+	},
+	"publishConfig": {
+		"access": "public",
+		"registry": "https://registry.npmjs.org/",
+		"scope": "@saritvakrat"
 	}
 }
